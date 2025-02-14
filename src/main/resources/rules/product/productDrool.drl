@@ -1,0 +1,10 @@
+package rules.product
+
+dialect "mvel"
+
+rule "Product drools"
+    when
+        eval(1==1)
+    then
+        System.out.println("========== DROOLS PRODUCT ACTIVEE =============");
+end

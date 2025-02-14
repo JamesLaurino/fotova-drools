@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="productRules" packages="rules.product">
+        <ksession name="productRulesSession"/>
+    </kbase>
+    <kbase name="commentRules" packages="rules.comment">
+        <ksession name="commentRulesSession"/>
+    </kbase>
+</kmodule>

@@ -1,0 +1,15 @@
+package rules.comment
+
+import java.util.List;
+import java.util.ArrayList;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+dialect "mvel"
+
+rule "Comment drools"
+    when
+        eval(1==1)
+    then
+        System.out.println("========== DROOLS COMMENT ACTIVEE =============");
+end
