@@ -2,7 +2,7 @@ package com.drools.dto.product;
 
 import com.drools.dto.category.CategoryDto;
 
-public class ProductDto {
+public class ProductDtoDrl {
     private Integer id;
 
     private String name;

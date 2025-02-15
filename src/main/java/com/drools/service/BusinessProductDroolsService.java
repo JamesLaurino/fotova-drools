@@ -1,6 +1,6 @@
 package com.drools.service;
 
-import com.drools.dto.product.ProductDto;
+import com.drools.dto.product.ProductDtoDrl;
 import com.drools.interfaces.IDrools;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BusinessProductDroolsService implements IDrools<ProductDto> {
+public class BusinessProductDroolsService implements IDrools<ProductDtoDrl> {
 
     @Autowired
     private KieContainer kieContainer;
 
 
     @Override
-    public void kieService(ProductDto objet) {
+    public void kieService(ProductDtoDrl objet) {
 
         //TODO : adapt with correct objet
         KieSession kieSession = kieContainer.newKieSession("productRulesSession");
@@ -27,12 +27,12 @@ public class BusinessProductDroolsService implements IDrools<ProductDto> {
     }
 
     @Override
-    public void kieServiceCollection(List<ProductDto> objets) {
+    public void kieServiceCollection(List<ProductDtoDrl> objets) {
 
         //TODO : adapt with correct objet
         KieSession kieSession = kieContainer.newKieSession("productRulesSession");
 
-        for(ProductDto productDto : objets)
+        for(ProductDtoDrl productDto : objets)
         {
             kieSession.insert(productDto);
         }
